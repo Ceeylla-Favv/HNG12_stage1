@@ -17,8 +17,11 @@ const classifyNumber = async (req, res) => {
 
   if (isArmstrong(num)) {
     properties.push("armstrong");
-    properties.push(num % 2 === 0 ? "even" : "odd");
   }
+
+  properties.push(num % 2 === 0 ? "even" : "odd");
+
+  const funFact = await getFunFact(num);
 
   return res.json({
     number: num,
@@ -29,7 +32,7 @@ const classifyNumber = async (req, res) => {
       .toString()
       .split("")
       .reduce((sum, digit) => sum + parseInt(digit), 0),
-    fun_fact: getFunFact,
+    fun_fact: funFact,
   });
 };
 

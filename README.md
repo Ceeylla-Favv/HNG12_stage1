@@ -15,7 +15,7 @@ A public API that classifies numbers based on mathematical properties and retrie
 ## 🚀 API Documentation
 ### **📌 Base URL**
 ```plaintext
-
+https://hng12-stage1-2tfo.onrender.com
 ```
 
 ### **📌 Endpoint**
@@ -48,8 +48,8 @@ A public API that classifies numbers based on mathematical properties and retrie
 ## ⚙️ **Setup Instructions**
 1. Clone the repository:
    ```bash
-   git clone 
-   cd 
+   git clone https://github.com/Ceeylla-Favv/HNG12_stage1.git
+   cd HNG12_stage1
    ```
 2. Install dependencies:
    ```bash
