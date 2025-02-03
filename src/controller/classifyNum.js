@@ -23,7 +23,7 @@ const classifyNumber = async (req, res) => {
 
   const funFact = await getFunFact(num);
 
-  const absoluteSum = Math.abs(num).toString.split("").reduce((sum, digit) => sum + parseInt(digit), 0);
+  const absoluteSum = Math.abs(num).toString().split("").reduce((sum, digit) => sum + parseInt(digit), 0);
 
   const digitSum = num < 0 ? -absoluteSum : absoluteSum;
 
