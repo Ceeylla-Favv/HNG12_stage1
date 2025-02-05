@@ -8,7 +8,7 @@ const {
 const classifyNumber = async (req, res) => {
   const { number } = req.query;
 
-  if (!number || isNaN(number)) {
+  if (!number || isNaN(number) || !Number.isInteger(Number(number))) {
     return res.status(400).json({ number, error: true });
   }
 
@@ -23,7 +23,10 @@ const classifyNumber = async (req, res) => {
 
   const funFact = await getFunFact(num);
 
-  const absoluteSum = Math.abs(num).toString().split("").reduce((sum, digit) => sum + parseInt(digit), 0);
+  const absoluteSum = Math.abs(num)
+    .toString()
+    .split("")
+    .reduce((sum, digit) => sum + parseInt(digit), 0);
 
   const digitSum = num < 0 ? -absoluteSum : absoluteSum;
 
